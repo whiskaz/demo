@@ -1,0 +1,40 @@
+2019-05-01 23:03:33.798  INFO 119180 --- [main] demo.App                                 : Starting App on NUC-1 with PID 119180 (C:\Users\Jeremy\IdeaProjects\demo\build\classes\java\main started by Jeremy in C:\Users\Jeremy\IdeaProjects\demo)
+2019-05-01 23:03:33.798  INFO 119180 --- [main] demo.App                                 : No active profile set, falling back to default profiles: default
+2019-05-01 23:03:34.875  INFO 119180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-01 23:03:35.001  INFO 119180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116ms. Found 1 repository interfaces.
+2019-05-01 23:03:36.180  INFO 119180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-01 23:03:36.707  INFO 119180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-01 23:03:36.892  INFO 119180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-01 23:03:37.086  INFO 119180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-05-01 23:03:37.086  INFO 119180 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-05-01 23:03:37.481  INFO 119180 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-01 23:03:38.735  INFO 119180 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2019-05-01 23:03:40.411  INFO 119180 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2ceee4b6'
+2019-05-01 23:03:40.411  INFO 119180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 23:03:42.931  WARN 119180 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-01 23:03:43.206  INFO 119180 --- [main] demo.App                                 : Started App in 10.681 seconds (JVM running for 11.585)
+2019-05-01 23:03:43.226  INFO 119180 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-01 23:03:43.236 ERROR 119180 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:807)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:794)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at demo.App.main(App.java:24)
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.shell.jline.ParsedLineInput.words(ParsedLineInput.java:44)
+	at org.springframework.shell.Shell.noInput(Shell.java:194)
+	at org.springframework.shell.Shell.evaluate(Shell.java:151)
+	at org.springframework.shell.Shell.run(Shell.java:134)
+	at org.springframework.shell.jline.InteractiveShellApplicationRunner.run(InteractiveShellApplicationRunner.java:84)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804)
+	... 3 common frames omitted
+
+2019-05-01 23:03:43.257  INFO 119180 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-01 23:03:43.257  INFO 119180 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2019-05-01 23:03:43.267  INFO 119180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-01 23:03:43.287  INFO 119180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
